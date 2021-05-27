@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(15, 15, 15);
+}
+
+.text {
+  font-size: 2rem;
+  letter-spacing: .25rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #ececec;
+  font-family: 'Fira Code', monospace;
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.type-text {
+  /* Lembrando que dá para centralizar os elementos com esse macete */
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.type-text::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  bottom: -10px;
+  height: 45px;
+  width: 10px;
+  margin-left: .5rem;
+  border-radius: 2px;
+  background-color: #ececec;
+;
+  /* transition: 600ms; */
+  animation: typecursor 800ms infinite;
+}
+
+@keyframes typecursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
